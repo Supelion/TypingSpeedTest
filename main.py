@@ -28,7 +28,6 @@ while True:
 
     if userInput != sentence:
         print("Your input did not match the sentence!")
-        break
     else:
         # Calculating response time
         response_time = datetime.utcnow() - startTime
