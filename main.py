@@ -22,13 +22,6 @@ while True:
     time.sleep(1)
     print("Go!")
 
-    if sentence == "He walked into the airport, past the banks of monitors.":
-        numOfWords = 10
-    elif sentence == "Inside the front door about thirty nametags were laid out on a table.":
-        numOfWords = 13
-    else:
-        numOfWords = 10
-
     # Input from user and declaring start time
     startTime = datetime.utcnow()
     userInput = input("\n\nStart typing here: ")
