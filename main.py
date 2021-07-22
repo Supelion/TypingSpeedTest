@@ -3,13 +3,16 @@ import time
 from datetime import datetime
 
 while True:
+
     # Choosing a sentence from the sentences array.
     sentences = [
-        "He walked into the airport, past the banks of monitors.",
-        "Inside the front door about thirty nametags were laid out on a table.",
-        "She says those bald patches make it look shanty Irish."
+        "He walked into the airport past the banks of monitors",
+        "Inside the front door about thirty nametags were laid out on a table",
+        "She says those bald patches make it look shanty Irish"
         ]
     sentence = str(random.choice(sentences))
+    sentenceArray = sentence.split()
+    words = len(sentenceArray)
 
     print("\nType the following:\n\n" + sentence + "\n\n")
 
@@ -35,6 +38,8 @@ while True:
         minutes, seconds = divmod(remainder, 60)
 
         timeTaken = round(seconds, 1)
+        minute = seconds / 60
+        wpm = round(words / minute)
 
         # Outputting the results
-        print(f"Done! Took {timeTaken}s.")
+        print(f"Done! Took {timeTaken}s. Your WPM is {wpm}")
